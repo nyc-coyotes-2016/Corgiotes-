@@ -1,3 +1,5 @@
 class Guess < ActiveRecord::Base
-  # Remember to create a migration!
+  belongs_to :card
+  belongs_to :round
+  has_many :players, through: :round, source: :user, class_name: :User
 end
