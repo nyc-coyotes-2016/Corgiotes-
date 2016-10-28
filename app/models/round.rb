@@ -3,6 +3,7 @@ class Round < ActiveRecord::Base
   validates :user_id, :deck_id, presence: true
   validate :validate_user_id, :validate_deck_id
 
+
   has_many :guesses
   has_many :guessed_cards, through: :guesses, source: :card
 
