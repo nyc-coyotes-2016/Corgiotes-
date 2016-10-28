@@ -1,0 +1,9 @@
+<h1>Deck: <%= @deck.subject %></h1>
+
+<p><%= @card.question %></p>
+
+<form method="POST" action="/decks">
+  <input type="text" name="answer" placeholder="answer?" />
+  <input type="hidden" name="deck_id" value="<%= @deck.id %>" />
+  <input type="submit">
+</form>
