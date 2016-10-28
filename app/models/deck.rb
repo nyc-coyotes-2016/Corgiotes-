@@ -14,7 +14,10 @@ class Deck < ActiveRecord::Base
   end
 
   def first_guess_correct
-    self.rounds.map { |round| round.guesses.}
+    self.rounds.map { |round| round.first_guess }[0]
   end
 
+  def total_guesses
+    self.rounds.map { |round| round.guesses }.flatten.count
+  end
 end

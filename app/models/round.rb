@@ -14,4 +14,13 @@ class Round < ActiveRecord::Base
   def validate_deck_id
     errors.add(:deck_id, "does not exist") unless Deck.exists?(self.deck_id)
   end
+
+  def first_guess
+    first_cards_guess_correct = card_ids.select { |num| card_ids.count(num) == 1 }
+    first_cards_guess_correct.length
+  end
+
+  def card_ids
+    self.guesses.flatten.map { |guess| guess.card_id }
+  end
 end
