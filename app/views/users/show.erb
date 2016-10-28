@@ -1,1 +1,18 @@
 <h1> Welcome, <%= @user.username %> </h1>
+
+
+<table>
+  <% @user.played_decks.each do |deck| %>
+  <tr>
+    <th>Date</th>
+    <th>Cards in Deck</th>
+    <th>First Guess Correct</th>
+    <th>Total Guesses</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td> </td>
+  </tr>
+</table>
