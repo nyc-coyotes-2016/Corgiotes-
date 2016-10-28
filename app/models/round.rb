@@ -18,4 +18,5 @@ class Round < ActiveRecord::Base
   def validate_deck_id
     errors.add(:deck_id, "does not exist") unless Deck.exists?(self.deck_id)
   end
+
 end

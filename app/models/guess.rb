@@ -15,4 +15,5 @@ class Guess < ActiveRecord::Base
   def validate_round_id
     errors.add(:round_id, "does not exist") unless Round.exists?(self.round_id)
   end
+
 end
