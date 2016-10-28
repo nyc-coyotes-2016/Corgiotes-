@@ -1,0 +1,10 @@
+<h1> Welcome To Corgiote's Flashcards! </h1>
+<% if @decks %>
+<ul>
+<% @decks.each do |deck| %>
+<li><a href="/decks/<%= deck.id %>"><%= deck.subject %></a></li>
+</ul>
+<% end %>
+<% else %>
+<p> There aren't any decks to play! ☹️ </p>
+<% end %>
