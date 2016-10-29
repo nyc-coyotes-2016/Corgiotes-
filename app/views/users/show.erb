@@ -1,18 +1,25 @@
 <h1> Welcome, <%= @user.username %> </h1>
 
-
-<table>
-  <% @user.played_decks.each do |deck| %>
+<% @sorted_rounds.each do |deck_name, rounds| %>
+<table class="responsive-table">
+  <span><h2><%= deck_name %></h2></span>
+  <thead>
   <tr>
-    <th>Date</th>
-    <th>Cards in Deck</th>
-    <th>First Guess Correct</th>
-    <th>Total Guesses</th>
+    <th data-field="date">Date</th>
+    <th data-field="number">Cards in Deck</th>
+    <th data-field="number">First Guess Correct</th>
+    <th data-field="number">Total Guesses</th>
   </tr>
+  </thead>
+  <tbody>
+    <% rounds.each do |round| %>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td> </td>
+    <td><%= round.played_at %></td>
+    <td><%= round.deck.card_quantity %></td>
+    <td><%= round.first_guess %></td>
+    <td><%= round.total_guesses %></td>
   </tr>
+  <% end %>
+  </tbody>
 </table>
+<% end %>

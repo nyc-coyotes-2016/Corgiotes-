@@ -23,4 +23,12 @@ class Round < ActiveRecord::Base
   def card_ids
     self.guesses.flatten.map { |guess| guess.card_id }
   end
+
+  def played_at
+    self.created_at.strftime('%B %d, %Y')
+  end
+
+  def total_guesses
+    self.guesses.count
+  end
 end
