@@ -25,13 +25,11 @@ get '/users/:id' do
   end
 
   @rounds.each do |round|
-    @sorted_rounds.each do |k,v|
-      if k == round.deck.subject
-        v << round
+    @sorted_rounds.each do |deck_name, rounds|
+      if deck_name == round.deck.subject
+        rounds << round
     end
   end
 end
-
-  binding.pry
   erb :'/users/show'
 end

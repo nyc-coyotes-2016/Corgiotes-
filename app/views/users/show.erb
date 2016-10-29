@@ -1,8 +1,8 @@
-<h1> Welcome, <%= @user.username %> </h1>
+<h5> Welcome, <%= @user.username %> </h5>
 
 <% @sorted_rounds.each do |deck_name, rounds| %>
-<table class="responsive-table">
-  <span><h2><%= deck_name %></h2></span>
+<table class="responsive-table highlight centered">
+  <h2 class="center-align"><%= deck_name %></h2>
   <thead>
   <tr>
     <th data-field="date">Date</th>

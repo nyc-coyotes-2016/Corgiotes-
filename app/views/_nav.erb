@@ -1,0 +1,8 @@
+<li><a href="/">Home</a></li>
+<% if logged_in? %>
+  <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
+  <li><a href="/sessions/logout">Log Out</a></li>
+<% else %>
+  <li><a href="/users/new">Create Account</a></li>
+  <li><a href="/sessions/login">Log In</a></li>
+<% end %>
