@@ -1,14 +1,7 @@
-<div class="error-handle">
-  <%if @errors %>
-    <ul>
-    <% @errors.each do |error| %>
-      <li><%= error %></li>
-    <% end %>
-  </ul>
-  <% end %>
-</div>
-
 <div class="container new-user-registration-form">
+
+  <%= erb :'_errors', layout: false, locals: { errors: @errors } %>
+  
   <h1>Create New Account</h1>
   <form class="user-registration-form" method="post" action="/users">
     <input type="text" name="user[username]" placeholder="username">

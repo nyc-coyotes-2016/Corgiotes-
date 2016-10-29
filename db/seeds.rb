@@ -21,6 +21,10 @@ Card.create(deck_id: 3, question: "Who created Wile E. Coyote?", answer: "Chuck 
 Card.create(deck_id: 3, question: "What is Wile E. Coyote's favorite company to order from?", answer: "ACME")
 
 Round.create(user_id: 1, deck_id: 2)
+Round.create(user_id: 1, deck_id: 1)
+Round.create(user_id: 1, deck_id: 3)
+Round.create(user_id: 1, deck_id: 3)
+Round.create(user_id: 1, deck_id: 2)
 
 Guess.create(card_id: 4, round_id: 1)
 Guess.create(card_id: 5, round_id: 1)
@@ -28,3 +32,24 @@ Guess.create(card_id: 5, round_id: 1)
 Guess.create(card_id: 6, round_id: 1)
 Guess.create(card_id: 6, round_id: 1)
 Guess.create(card_id: 6, round_id: 1)
+
+Guess.create(card_id: 1, round_id: 2)
+Guess.create(card_id: 1, round_id: 2)
+Guess.create(card_id: 2, round_id: 2)
+Guess.create(card_id: 3, round_id: 2)
+
+Guess.create(card_id: 7, round_id: 3)
+Guess.create(card_id: 8, round_id: 3)
+Guess.create(card_id: 9, round_id: 3)
+Guess.create(card_id: 9, round_id: 3)
+Guess.create(card_id: 9, round_id: 3)
+
+Guess.create(card_id: 7, round_id: 4)
+Guess.create(card_id: 7, round_id: 4)
+Guess.create(card_id: 8, round_id: 4)
+Guess.create(card_id: 8, round_id: 4)
+Guess.create(card_id: 9, round_id: 4)
+
+Guess.create(card_id: 4, round_id: 5)
+Guess.create(card_id: 5, round_id: 5)
+Guess.create(card_id: 6, round_id: 5)

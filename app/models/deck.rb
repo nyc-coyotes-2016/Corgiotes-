@@ -4,4 +4,8 @@ class Deck < ActiveRecord::Base
   # has_many :players, through: :rounds, source: :player  #FIX ME !!!!
   # belongs_to :creator, class: User
   validates :subject, presence: true
+
+  def card_quantity
+    self.cards.count
+  end
 end
